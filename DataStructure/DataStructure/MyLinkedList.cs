@@ -1,10 +1,11 @@
-﻿using System;
+﻿using DataStrucure;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataStrucure
+namespace DataStructure
 {
     class MyLinkedList
     {
@@ -25,6 +26,13 @@ namespace DataStrucure
                 }
                 temp.next = newNode;
             }
+            Console.WriteLine("{0} is inserted into LinkedList", newNode.data);
+        }
+        public void AddFirst(int data)
+        {
+            Node newNode = new Node(data);
+            newNode.next = this.head;
+            this.head = newNode;
             Console.WriteLine("{0} is inserted into LinkedList", newNode.data);
         }
         public void Display()
